@@ -1,0 +1,38 @@
+WIZYBOO API SERVICES
+====================
+Service ID: wapi
+Module: WizyBoo API Services
+Version: 0.1-placeholder
+Status: PLACEHOLDER - implementation required
+
+PURPOSE
+Connect WizyBoo modules through a documented internal service interface.
+
+PLANNED MODULES
+- wzlm.ser: Windows Live Messenger troubleshooting and compatible-service support
+- wvs2012.ser: Visual Studio 2012 and .NET Framework 3.5 troubleshooting
+
+PLANNED RESPONSIBILITIES
+- Route requests to registered WizyBoo modules
+- Validate module and request identifiers
+- Return structured success and error statuses
+- Record diagnostic information without storing passwords or secrets
+- Provide a future integration point for approved online services
+
+REQUEST FORMAT (PLANNED)
+module=<module-id>
+action=<action-name>
+version=<module-version>
+
+RESPONSE FORMAT (PLANNED)
+status=<ok|error|not_implemented>
+message=<human-readable-result>
+
+SECURITY NOTES
+- Do not put API keys, passwords, or private tokens in this file.
+- Validate all requests before passing them to a module.
+- Use authenticated, encrypted connections when online services are implemented.
+
+IMPORTANT
+This is a project specification placeholder, not executable API code.
+No endpoints or live network connections are configured yet.

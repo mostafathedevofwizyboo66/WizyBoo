@@ -1,0 +1,39 @@
+WIZYBOO ZIP SYSTEM SERVICES
+==========================
+Service ID: wzip
+Module: WizyBoo ZIP System
+Version: 0.1-placeholder
+Status: SPECIFICATION - implementation required
+
+PURPOSE
+Define archive-management features for WizyBoo project files and module packages.
+
+PLANNED FUNCTIONS
+- Create ZIP archives from selected project files and folders.
+- Extract ZIP archives into a selected destination.
+- Organize WizyBoo project folders.
+- Verify archive integrity before extraction.
+- Create and manage project backup archives.
+- Package WizyBoo modules for distribution.
+
+SAFETY REQUIREMENTS
+- Show the archive contents before extraction.
+- Reject unsafe paths that attempt to write outside the selected destination.
+- Do not overwrite existing files without clear user confirmation.
+- Treat files inside archives as untrusted.
+- Never execute files automatically after extraction.
+
+PLANNED REQUEST FIELDS
+action=<create|extract|list|verify|backup>
+source=<selected-file-or-folder>
+destination=<selected-destination>
+archive=<archive-path>
+
+PLANNED RESPONSE FIELDS
+status=<ok|error|not_implemented>
+message=<human-readable-result>
+archive=<created-or-checked-archive-path>
+
+IMPORTANT
+This is a text-based service specification placeholder.
+It does not yet contain executable ZIP-handling code or perform archive operations.
